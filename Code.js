@@ -28,7 +28,7 @@ function sendEmails() {
     <p>Looking forward to hearing from you,<br>
     James Susanto<br>
     COO of Youdemonia<br>
-    <a href="http://www.youdemonia.org">www.youdemonia.org</a></p>
+    <a href="https://youdemoniaorg.wixsite.com/live">www.youdemonia.org</a></p>
   `;
 
   for (var i = 0; i < emails.length; i++) {
