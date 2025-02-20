@@ -10,11 +10,22 @@ function sendEmails() {
 
   ];
 
+
+
   //CHANGE VARIABLBE NAMES BELOW
   var state_of_recipient = "MI";
+  var name_of_sender = "James Susanto" 
 
+  //If you're in college, say your college; if not, you can say your Hometown: "from Detroit Michigan"
+  var intro_of_sender = "a first-year at the University of Michigan"; 
 
+  var position_at_youdemonia = "COO";
+  var phone_number_of_sender = "(248) 444-6095";
+  var email_of_sender = "jsusanto@umich.com";
   
+
+
+
   var subjects = [
     "Help Us Connect MI's Youth to Your Organization's Network!",
     "[Non-Profit] Connect to " + state_of_recipient + "'s Youth With Youdemonia!",
@@ -24,7 +35,7 @@ function sendEmails() {
 
   var body = `
     <p>Good Morning!</p>
-    <p>My name is Nathan George, and I am a freshman at UPenn Wharton and the CEO of a student-led nonprofit organization called Youdemonia. 
+    <p>My name is ` + name_of_sender + `, and I am ` + intro_of_sender + ` and the ` + position_at_youdemonia + ` of a student-led nonprofit organization called Youdemonia. 
     Our organization works to connect youth with local and national opporunities hosted by community organizations to increase youth engagement in the community.
     In the past, we have organized educational opportunities for the youth in Metro-Detroit, like the Youth Career Symposium sponsored by The Huntington Bank 
     and The College Admissions Webinar in collaboration with The University of Chicago.</p>
@@ -39,10 +50,9 @@ function sendEmails() {
     <p>Looking forward to hearing from you,</p>
     
     <p>--<br>
-    <b>Nathan George</b><br>
-    CEO and Founder, <a href="http://www.youdemonia.org">Youdemonia</a><br>
-    The Wharton School | University of Pennsylvania Class of 2028<br>
-    (248) 444-6095 | <a href="mailto:nathan1@wharton.upenn.edu">nathan1@wharton.upenn.edu</a></p>
+    <b>` + name_of_sender + `</b><br>
+    ` + position_at_youdemonia + `, <a href="http://www.youdemonia.org">Youdemonia</a><br>
+    ` + phone_number_of_sender + ` | <a href=` + email_of_sender + `>` + email_of_sender + `</a></p>
   `;
 
   var totalEmails = emails.length;
