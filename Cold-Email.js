@@ -3,7 +3,7 @@ function sendEmails() {
     "youdemonia.org@gmail.com",
 
   
-    // Add Emails bellow
+    // ADD EMAILS BELOW
 
 
 
@@ -12,19 +12,38 @@ function sendEmails() {
 
 
 
-  //CHANGE VARIABLBE NAMES BELOW
+  //  CHANGE VARIABLBE NAMES BELOW
+  var state_of_recipient = "MI - DELETE & CHANGE";
+  var name_of_sender = "James Susanto - DELETE & CHANGE" ;
+
+  //If you're in college, say your college; if not, you can say your Hometown: "from Detroit. Michigan"
+  var intro_of_sender = "a first-year at the University of Michigan - DELETE & CHANGE"; 
+
+  var position_at_youdemonia = "CEO - DELETE & CHANGE";
+  var phone_number_of_sender = "(248) 444-6095 - DELETE & CHANGE";
+  var email_of_sender = "jsusanto@umich.com - DELETE & CHANGE";
+
+  /*
+  SAMPLE VARIABLES:
+
   var state_of_recipient = "MI";
   var name_of_sender = "James Susanto" 
-
-  //If you're in college, say your college; if not, you can say your Hometown: "from Detroit Michigan"
-  var intro_of_sender = "a first-year at the University of Michigan"; 
-
-  var position_at_youdemonia = "COO";
+  var intro_of_sender = "from Detroit, Michigan"; 
+  var position_at_youdemonia = "CEO";
   var phone_number_of_sender = "(248) 444-6095";
   var email_of_sender = "jsusanto@umich.com";
+  */
+
   
+  //  ONCE YOU CHANGED THE VARIABLES AND LISTED EMAILS, YOU'RE READY TO RUN
+  //  IF YOU DIDN'T CHANGE ONE OF THE VARIABLES YOU'LL GET AN ERROR
+  //  THE ERROR MESSAGE WILL SAY THE FIRST VARIABLE YOU DIDN'T CHANGE
+  //  CHANGE THE VARIABLE AND RUN IT AGAIN
+  //
+  //  DON'T CHANGE ANYTHING BELOW
 
 
+  
 
   var subjects = [
     "Help Us Connect MI's Youth to Your Organization's Network!",
@@ -54,6 +73,28 @@ function sendEmails() {
     ` + position_at_youdemonia + `, <a href="http://www.youdemonia.org">Youdemonia</a><br>
     ` + phone_number_of_sender + ` | <a href=` + email_of_sender + `>` + email_of_sender + `</a></p>
   `;
+
+  
+  //Variables Check
+  if (state_of_recipient == "MI - DELETE & CHANGE"){
+    throw new Error("Didn't change var state_of_recipient");
+  }
+  if (name_of_sender == "James Susanto - DELETE & CHANGE"){
+    throw new Error("Didn't change var name_of_sender");
+  }
+  if (intro_of_sender == "a first-year at the University of Michigan - DELETE & CHANGE"){
+    throw new Error("Didn't change var intro_of_sender");
+  }
+  if (position_at_youdemonia == "CEO - DELETE & CHANGE"){
+    throw new Error("Didn't change var position_at_youdemonia");
+  }
+  if (phone_number_of_sender == "(248) 444-6095 - DELETE & CHANGE"){
+    throw new Error("Didn't change var phone_number_of_sender");
+  }
+  if (email_of_sender == "jsusanto@umich.com - DELETE & CHANGE"){
+    throw new Error("email_of_sender");
+  }
+
 
   var totalEmails = emails.length;
   var emailsSent = 0;
