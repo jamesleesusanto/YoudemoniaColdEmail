@@ -5,7 +5,7 @@ function sendEmails() {
   
     // ADD EMAILS BELOW
 
-
+    "nathanmanalilgeorge@gmail.com"
 
 
   ];
@@ -22,6 +22,8 @@ function sendEmails() {
   var position_at_youdemonia = "CEO - DELETE & CHANGE";
   var phone_number_of_sender = "(248) 444-6095 - DELETE & CHANGE";
   var email_of_sender = "jsusanto@umich.com - DELETE & CHANGE";
+  var calendly_link = "calendly.com/youdemonia-meets - DELETE & CHANGE";
+
 
   /*
   SAMPLE VARIABLES:
@@ -32,7 +34,10 @@ function sendEmails() {
   var position_at_youdemonia = "CEO";
   var phone_number_of_sender = "(248) 444-6095";
   var email_of_sender = "jsusanto@umich.com";
+  var calendly_link = "calendly.com/youdemonia-meets";
   */
+
+
 
   
   //  ONCE YOU CHANGED THE VARIABLES AND LISTED EMAILS, YOU'RE READY TO RUN
@@ -46,33 +51,63 @@ function sendEmails() {
   
 
   var subjects = [
-    "Help Us Connect MI's Youth to Your Organization's Network!",
-    "[Non-Profit] Connect to " + state_of_recipient + "'s Youth With Youdemonia!",
+
+
+    "Help Us Connect " + state_of_recipient + "'s Youth to Your Organization's Network!",
+    "[Non-Profit] Connect to " + state_of_recipient + "'s Youth For Free", 
     "Non-Profit Founder Sharing Resources!",
-    "Free Way to Expand Student Non-Profit Involvement!"
+    "High Schooler Sending Youth to Your Organization's Network"
+
+
+
   ];
+
+  
+
 
   var body = `
     <p>Good Morning!</p>
+
     <p>My name is ` + name_of_sender + `, and I am ` + intro_of_sender + ` and the ` + position_at_youdemonia + ` of a student-led nonprofit organization called Youdemonia. 
-    Our organization works to connect youth with local and national opporunities hosted by community organizations to increase youth engagement in the community.
-    In the past, we have organized educational opportunities for the youth in Metro-Detroit, like the Youth Career Symposium sponsored by The Huntington Bank 
-    and The College Admissions Webinar in collaboration with The University of Chicago.</p>
+
+    Our organization works to connect youth with educational opportunities hosted by civic organizations to increase youth engagement in the community.
+
+    </p>
+
+
 
     <p>Today, thousands of youth-focused academic resources are offered annually, yet many students fail to utilize them because they do not know they exist or don't have the time to properly utilize them. 
+
+
+
     That was...until now! Youdemonia is building YouConnect - an online "one-stop shop" where students can find a variety of events, workshops, and other career-building opportunities without any hassle.</p>
 
-    <p>Your organization caught my eye with your significant community impact, and I would love to see how we can work together to push your resources out to more youth through our platform (free to use)!</p>
 
-    <p>If your team is interested in engaging more students, I would love to chat with you when you are available.</p>
+
+    <p><b>I was impressed by your organization’s impact thus far and would love to schedule a 20 minute call to talk about how we can work together to push your resources out to more youth through our platform (free to use)!</b></p>
+
+
+
+    <p>My availability is listed <a href = ` + calendly_link + `> here</a>, would love to chat anytime convenient if your team is interested in engaging more students!</p>
+
+
 
     <p>Looking forward to hearing from you,</p>
+
     
+
     <p>--<br>
+
     <b>` + name_of_sender + `</b><br>
+
     ` + position_at_youdemonia + `, <a href="http://www.youdemonia.org">Youdemonia</a><br>
+
     ` + phone_number_of_sender + ` | <a href=` + email_of_sender + `>` + email_of_sender + `</a></p>
+
   `;
+
+
+
 
   
   //Variables Check
@@ -94,6 +129,10 @@ function sendEmails() {
   if (email_of_sender == "jsusanto@umich.com - DELETE & CHANGE"){
     throw new Error("email_of_sender");
   }
+  if (calendly_link == "calendly.com/youdemonia-meets - DELETE & CHANGE"){
+    throw new Error("calendly_link");
+  }
+
 
 
   var totalEmails = emails.length;
